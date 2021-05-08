@@ -12,12 +12,17 @@
 
 #### Развертывание репозитория
 Переходим в папку, где будем развертывать контейнер, например /opt, и клонируем репозиторий:
-    cd /opt
-    git clone https://github.com/Fav0rit/favorit_majordomo_docker.git
-    cd favorit_majordomo_docker
-    cp sample.env .env
-    nano .env
+``` 
+cd /opt
+git clone https://github.com/Fav0rit/favorit_majordomo_docker.git
+cd favorit_majordomo_docker
+cp sample.env .env
+nano .env
+```
 Вписываем в .env свои логины и пароли и запускаем установку
-    make install
+```
+make install
+```
 После всех операций мы должны получить рабочую композицию сервисов.
 Обращаю внимание, что веб-сервер и mqtt-брокер подключены в режиме "host" а значит все их порты доступны напрямую.
+Для ручного запуска ```docker-compose up -d```
