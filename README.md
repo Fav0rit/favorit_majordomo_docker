@@ -29,3 +29,10 @@ make install
 
 ### TODO
 - Сделать скрипт переноса БД в оперативную память
+- Настроить автоматическое резервирование БД
+
+#### References
+https://github.com/sprintcube/docker-compose-lamp
+https://github.com/A-SOM/docker-majordomo
+https://github.com/sevrugin/docker-majordomo
+
