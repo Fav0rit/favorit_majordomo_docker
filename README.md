@@ -32,7 +32,6 @@ make install
 - Настроить автоматическое резервирование БД
 
 #### References
-https://github.com/sprintcube/docker-compose-lamp
-https://github.com/A-SOM/docker-majordomo
-https://github.com/sevrugin/docker-majordomo
-
+https://github.com/sprintcube/docker-compose-lamp<br>
+https://github.com/A-SOM/docker-majordomo<br>
+https://github.com/sevrugin/docker-majordomo<br>
