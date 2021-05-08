@@ -69,3 +69,14 @@ services:
       - ./config/mosquitto:/mosquitto/config
     network_mode: "host"
     restart: always
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    volumes:
+      - ./app/zigbee2mqtt/data:/app/data
+      - ./app/zigbee2mqtt/run/udev:/run/udev:ro
+    restart: always
+    network_mode: host
+    privileged: true
+    environment:
+      - TZ=Europe/Moscow
