@@ -18,9 +18,6 @@ SED?=/bin/sed -i
 export UID = $(shell id -u)
 export GID = $(shell id -g)
 
-#vars
-#WWW_PATH=./app/www
-#DB_DUMP_FILE=./app/www/db_terminal.sql
 .PHONY: help
 help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
