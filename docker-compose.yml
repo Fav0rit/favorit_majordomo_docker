@@ -42,7 +42,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
   phpmyadmin:
     #image: phpmyadmin/phpmyadmin
-    image: jackgruber/phpmyadmin:5.0.2
+    image: jackgruber/phpmyadmin:armhf
     container_name: '${COMPOSE_PROJECT_NAME}-phpmyadmin'
     depends_on:
       - database
