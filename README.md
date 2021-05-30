@@ -2,8 +2,8 @@
 На данный момент проверено на ubuntu server 20.04 LTS на Raspberry Pi 4
 
 #### Установка самого докера:
-    sudo apt get update
-    sudo apt get upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
     sudo apt-get install docker docker-compose
 
 #### Установка Portainer по желанию
