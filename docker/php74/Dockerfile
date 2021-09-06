@@ -84,6 +84,13 @@ RUN		   mkdir -p /var/log/supervisor && \
 
 CMD /usr/bin/supervisord -n -c /etc/supervisor.conf
 
+RUN        apt-get update && apt-get install -y ftp iputils-ping
+
+#RUN a2enmod proxy && \
+#a2enmod proxy_http && \
+#a2enmod proxy_balancer && \
+#a2enmod lbmethod_byrequests
+
 # Cleanup
 #RUN rm -rf /usr/src/*
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
