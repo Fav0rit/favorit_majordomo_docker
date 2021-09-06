@@ -2,13 +2,13 @@
 На данный момент проверено на ubuntu server 20.04 LTS на Raspberry Pi 4
 
 #### Установка самого докера:
-    sudo apt get update
-    sudo apt get upgrade
+    sudo apt-get update
+    sudo apt-get upgrade
     sudo apt-get install docker docker-compose
 
 #### Установка Portainer по желанию
     docker volume create portainer_data
-    docker run -d -p 8000:8000 -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
+    docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer
 
 #### Развертывание репозитория
 Переходим в папку, где будем развертывать контейнер, например /opt, и клонируем репозиторий:
