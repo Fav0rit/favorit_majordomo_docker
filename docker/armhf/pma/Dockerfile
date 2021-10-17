@@ -1,0 +1,1 @@
+FROM jackgruber/phpmyadmin:armhf
