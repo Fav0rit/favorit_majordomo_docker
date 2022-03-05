@@ -10,8 +10,8 @@
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
 
-path_mysql_tmp=/opt/favorit_majordomo_docker/app/data/mysql/
-path_mysql_real=/opt/favorit_majordomo_docker/app/data/mysql_real/
+path_mysql_tmp='/mnt/hdd/docker/favorit_majordomo_docker/app/data/mysql'
+path_mysql_real='/mnt/hdd/docker/favorit_majordomo_docker/app/data/mysql_real'
 
 case "$1" in
   start)
