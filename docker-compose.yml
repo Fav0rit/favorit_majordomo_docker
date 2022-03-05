@@ -23,7 +23,8 @@ services:
       PMA_PORT: ${HOST_MACHINE_PMA_PORT}
       MYSQL_USER : ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      MYSQL_HOST : ${MYSQL_HOST}
+      MYSQL_HOST : ${COMPOSE_PROJECT_NAME}-database
+      #MYSQL_HOST : ${MYSQL_HOST}
       TZ: ${TZ}
   database:
     build:
@@ -59,9 +60,9 @@ services:
       DB_DUMP_FREQ: 1440
       DB_DUMP_BEGIN: 0180
       DB_CLEANUP_TIME: 8640
-      MD5: FALSE
-      COMPRESSION: GZ
-      SPLIT_DB: FALSE
+      MD5: 'FALSE'
+      COMPRESSION: 'GZ'
+      SPLIT_DB: 'FALSE'
       TZ: ${TZ}
     restart: always
   phpmyadmin:
@@ -97,14 +98,3 @@ services:
     environment:
       TZ: ${TZ}
     restart: always
-  zigbee2mqtt:
-    container_name: '${COMPOSE_PROJECT_NAME}-zigbee2mqtt'
-    image: koenkk/zigbee2mqtt
-    volumes:
-      - ./app/zigbee2mqtt/data:/app/data
-      - ./app/zigbee2mqtt/run/udev:/run/udev:ro
-    restart: always
-    network_mode: 'host'
-    privileged: true
-    environment:
-      TZ: ${TZ}

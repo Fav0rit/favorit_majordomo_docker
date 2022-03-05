@@ -43,6 +43,7 @@ init-app: ## Init app folder
 		$(ECHO) -n 'Make $(MAJORDOMO_ROOT)/config.php...'; \
 		cp $(MAJORDOMO_ROOT)/config.php.sample $(MAJORDOMO_ROOT)/config.php; \
 		$(SED) "s/'DB_HOST', 'localhost'/'DB_HOST', \$$_ENV['MYSQL_HOST']/g" $(MAJORDOMO_ROOT)/config.php; \
+		$(SED) "s/'DB_NAME', 'localhost'/'DB_NAME', \$$_ENV['MYSQL_DATABASE']/g" $(MAJORDOMO_ROOT)/config.php; \
 		$(SED) "s/'DB_USER', 'root'/'DB_USER', \$$_ENV['MYSQL_USER']/g" $(MAJORDOMO_ROOT)/config.php; \
 		$(SED) "s/'DB_PASSWORD', ''/'DB_PASSWORD', \$$_ENV['MYSQL_PASSWORD']/g" $(MAJORDOMO_ROOT)/config.php; \
 		$(ECHO) '\t\t\t\t$(OK_COLOR)[OK]$(NO_COLOR)'; \
