@@ -54,7 +54,7 @@ services:
     environment:
       DB_TYPE: ${DATABASE}
       DB_HOST: ${MYSQL_HOST}
-      DB_NAME: ${MYSQL_DATABASE}
+      DB_NAME: ${COMPOSE_PROJECT_NAME}-database
       DB_USER: ${MYSQL_USER}
       DB_PASS: ${MYSQL_PASSWORD}
       DB_DUMP_FREQ: 1440
