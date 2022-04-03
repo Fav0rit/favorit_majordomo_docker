@@ -53,8 +53,8 @@ services:
       - ./config/backup.sh:/assets/custom-scripts/post-script.sh
     environment:
       DB_TYPE: ${DATABASE}
-      DB_HOST: ${MYSQL_HOST}
-      DB_NAME: ${COMPOSE_PROJECT_NAME}-database
+      DB_HOST: ${COMPOSE_PROJECT_NAME}-database
+      DB_NAME: ${MYSQL_DATABASE}
       DB_USER: ${MYSQL_USER}
       DB_PASS: ${MYSQL_PASSWORD}
       DB_DUMP_FREQ: 1440
@@ -94,7 +94,7 @@ services:
     container_name: '${COMPOSE_PROJECT_NAME}-mosquitto'
     volumes:
       - ./config/mosquitto:/mosquitto/config
-    network_mode: 'host'
+    network_mode: 'bridge'
     environment:
       TZ: ${TZ}
     restart: always
